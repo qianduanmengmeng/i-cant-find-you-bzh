@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html id="html" debug="true">
+<head lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/common.css" />
+<link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body >
+<img src="img/index_bg.jpg" width="1920" height="1000" class="index_bg"/>
+<h1>前端签到系统</h1>
+<div class="wrap">
+    <div class="box">
+        <div>
+        	<button disabled>
+                <i class="fa fa-check"></i>
+            	<span>签到成功</span>
+            </button>
+        </div>
+        <div>welcome</div>
+        <div>
+        	<button class="sign_in">
+                <i class="fa fa-pencil"></i>
+                <span>点击签到</span>
+            </button>
+        </div>
+        <div>welcome</div>
+        <div>welcome</div>
+        <div>welcome</div>
+    </div>
+</div>
+<p class="succeed"></p>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(".sign_in").click(function(){
+	$(".box").addClass("box1");
+	$(this).addClass("disn");
+})
+$(".wrap").click(function(){
+	if($(".box").hasClass("box1")){
+		$(".succeed").text("您已签到成功");
+	}
+})
+</script>
+</body>
+</html>
